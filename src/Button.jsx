@@ -1,15 +1,16 @@
 import { useState } from "react";
 
-function Button({ value }) { // Changed prop name to 'value'
-    const [currentValue, setCurrentValue] = useState(); // Initialize state with value
-
+function Button({ value, handleClick,index }) { 
+    
     function handle() {
-        setCurrentValue("X"); // Change value to "X" on click
+        if(value===null){
+            handleClick(index);   
+        }
     }
 
     return (
         <button className="Mybutton" onClick={handle}>
-            {currentValue}
+            {value}
         </button>
     );
 }

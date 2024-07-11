@@ -1,66 +1,78 @@
-
-Button {
+body{
+  font-size: 2rem;
+  color: rgb(60, 58, 197);
+  font-family: "MedievalSharp", cursive;
+}
+button {
   width: 50px;
   height: 50px;
-  padding: 0.6em 1.2em;
-  font-size: 1rem;
+  padding: 0.5rem;
+  font-size: 2rem;
   cursor: pointer;
 
+  transition: box-shadow 0.1s, background-color 0.1s, scale 0.3s;
 }
 
+.Mybutton:hover {
+  background-color: #ddd; /* Example hover color */
 
-.board{
+  outline: 5px inset orange;
+}
+
+button:active {
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2); /* Create inset shadow */
+  background-color: #ccc; /* Optional: Change background color on click */
+  scale: 0.8;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: none; /* Removed border-color */
+  justify-content: center; /* Center content horizontally */
+  width: 160px;
+  height: 160px;
+  margin: 15px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.container {
   display: flex;
+  width: 100%;
   flex-direction: column;
+  height: 100vh;
   align-items: center;
-  border-color: none;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(69, 253, 45, 1) 100%
+  );
+}
+.restart-button__button{
+  background-color: rgb(192, 57, 23);
+  border-radius: 20%;
+  width: 200px;
+  margin-top: 20px;
+  transition: 1s;
+}
+.restart-button__button:hover {
+  background-color:rgba(69, 253, 45, 1); /* Example hover color */
+
+  outline: 5px inset rgb(33, 94, 174);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.board_row{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: fixed;
+.restart-button__button {
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-.one{
-  border-left: none;
-  border-top: none;
-}
 
-.two{
-  border-top: none;
-}
 
-.three{
-  border-: none;
-  border-top: none;
-}
-.one{
-  border-left: none;
-  border-top: none;
-}
-
-.one{
-  border-left: none;
-  border-top: none;
-}
-
-.one{
-  border-left: none;
-  border-top: none;
-}
-.one{
-  border-left: none;
-  border-top: none;
-}
-
-.one{
-  border-left: none;
-  border-top: none;
-}
-
-.one{
-  border-left: none;
-  border-top: none;
-}
